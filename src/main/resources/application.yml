@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: BankApp
+    security:
+      jwt:
+        secret-key: ${JWT_SECRET_KEY}
+        expiration: ${ACCESS_TOKEN_EXPIRATION}
+        refresh-token:
+          expiration: ${REFRESH_TOKEN_EXPIRATION}
+  datasource:
+    url: ${DATABASE_URL}
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
